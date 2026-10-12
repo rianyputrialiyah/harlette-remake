@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Harlette</title>
+ <!-- googlefont -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- second css -->
+  <link rel="stylesheet" href="css/second.css">
+</head>
+ 
+<body>
+ 
+  <!-- HEADER  -->
+  <header class="header">
+    <a href="index.html" class="logo"><img src="assets/Gemini_Generated_Image_1l9sxw1l9sxw1l9s-removebg-preview.png" alt=""></a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <button id="cartOpen">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+ 
+ 
+  <main>
+ 
+  <!-- judul -->
+  <section class="intro">
+    <h1>Our products</h1>
+    <p>Oat skincare that is gentle by design: no SLS, no alcohol, registered with BPOM and halal certified.</p>
+  </section>
+ 
+ 
+  <!-- product -->
+  <section class="wrap" id="shop">
+    <div class="slider-head">
+      <p>Our skincare colection</p>
+      <div class="arrows">
+        <button id="prev" aria-label="Previous">&larr;</button>
+        <button id="next" aria-label="Next">&rarr;</button>
+      </div>
+    </div>
+ 
+    <div class="slider" id="slider">
+ 
+      <article>
+        <div class="photo">
+          <img src="assets/fw .png" alt="Facial Wash">
+        </div>
+        <h2 class="name">Facial Wash</h2>
+        <p class="tag">Cleanse gently</p>
+        <p class="price">Rp 117.500</p>
+        <button class="btn add" data-name="Facial Wash">Add to cart</button>
+      </article>
+ 
+      <article>
+        <div class="photo">
+          <img src="assets/serum harlette.png" alt="Chill Oat Serum">
+        </div>
+        <h2 class="name">Chill Oat Serum</h2>
+        <p class="tag">Oat, Ceramide & Niacinamide, Calm reactive skin</p>
+        <p class="price">Rp 142.000</p>
+        <button class="btn add" data-name="Chill Oat Serum">Add to cart</button>
+      </article>
+ 
+      <article>
+        <div class="photo">
+          <img src="assets/day cream.png" alt="Day Cream">
+        </div>
+        <h2 class="name">Oatmilk day cream</h2>
+        <p class="tag">Oats, Niacinamide, and Rice Bran: soothe, brighten, and protect the skin barrier</p>
+        <p class="price">Rp 81.000</p>
+        <button class="btn add" data-name="Day Cream">Add to cart</button>
+      </article>
+ 
+      <article>
+        <div class="photo">
+          <img src="assets/sunscreen.png" alt="Sunscreen">
+        </div>
+        <h2 class="name">Sunscreen</h2>
+        <p class="tag"> SPF 50 PA++++, helps protect the skin from UV rays</p>
+        <p class="price">Rp 153.000</p>
+        <button class="btn add" data-name="Sunscreen">Add to cart</button>
+      </article>
+ 
+      <article>
+        <div class="photo">
+          <img src="assets/sleeping mask.png" alt="Sleeping Mask">
+        </div>
+        <h2 class="name">Sleeping Mask</h2>
+        <p class="tag">Overnight Hydration, keeps skin moisturized all night long</p>
+        <p class="price">Rp 151.200</p>
+        <button class="btn add" data-name="Sleeping Mask">Add to cart</button>
+      </article>
+      <article>
+        <div class="photo">
+          <img src="assets/sleeping mask.png" alt="Sleeping Mask">
+        </div>
+        <h2 class="name">Sleeping Mask</h2>
+        <p class="tag">Overnight Hydration, keeps skin moisturized all night long</p>
+        <p class="price">Rp 151.200</p>
+        <button class="btn add" data-name="Sleeping Mask">Add to cart</button>
+      </article>
+      <article>
+        <div class="photo">
+          <img src="assets/sleeping mask.png" alt="Sleeping Mask">
+        </div>
+        <h2 class="name">Sleeping Mask</h2>
+        <p class="tag">Overnight Hydration, keeps skin moisturized all night long</p>
+        <p class="price">Rp 151.200</p>
+        <button class="btn add" data-name="Sleeping Mask">Add to cart</button>
+      </article>
+ 
+    </div>
+  </section>
+ 
+ 
+  <!-- FAQ -->
+  <section class="wrap section" id="faq">
+    <h2 class="title">Frequently asked questions</h2>
+ 
+    <!-- tombol tab -->
+    <div class="tabs" id="faqTabs">
+      <button class="tab on" data-tab="faq-order">How do I order?</button>
+      <button class="tab" data-tab="faq-routine">Which order to use?</button>
+      <button class="tab" data-tab="faq-ingredients">Ingredients</button>
+      <button class="tab" data-tab="faq-halal">Halal and BPOM</button>
+    </div>
+ 
+    <!-- isi tab -->
+    <div class="tab-box on" id="faq-order">
+      <p>Add the products you want to your cart, then tap "Order via WhatsApp". Your order is sent to us as a ready-made message.</p>
+    </div>
+ 
+    <div class="tab-box" id="faq-routine">
+      <p>Morning: Facial Wash, Chill Oat Serum, Day Creme, then Sunscreen. Night: Facial Wash, Chill Oat Serum, then Sleeping Mask.</p>
+    </div>
+ 
+    <div class="tab-box" id="faq-ingredients">
+      <p>The full ingredient list is printed on the packaging of every product.</p>
+    </div>
+ 
+    <div class="tab-box" id="faq-halal">
+      <p>Yes. Harlette is registered with BPOM and halal certified.</p>
+    </div>
+  </section>
+ 
+ 
+  <!-- contact section -->
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+ 
+      <div>
+        <h2 class="title">Contact us</h2>
+        <p class="lead">Questions about a product or your order? Send us a message and we will reply as soon as we can.</p>
+ 
+        <!-- ganti dengan data kamu -->
+        <p class="info"><strong>WhatsApp</strong><br>+62 XXX XXXX XXXX</p>
+        <p class="info"><strong>Instagram</strong><br>@harlette</p>
+        <p class="info"><strong>Email</strong><br>hello@harlette.com</p>
+      </div>
+ 
+      <form id="contactForm">
+        <label for="nama">Your name</label>
+        <input type="text" id="nama" required>
+ 
+        <label for="pesan">Message</label>
+        <textarea id="pesan" rows="5" required></textarea>
+ 
+        <button type="submit" class="btn solid">Send via WhatsApp</button>
+      </form>
+ 
+    </div>
+  </section>
+ 
+  </main>
+ 
+ 
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    &copy; 2026 Harlette. All rights reserved.
+  </footer>
+ 
+ 
+  <!-- ========== KERANJANG (muncul dari kanan) ========== -->
+  <div class="overlay" id="overlay"></div>
+ 
+  <aside class="cart" id="cart">
+    <div class="cart-head">
+      <span>Your cart</span>
+      <button id="cartClose">Close</button>
+    </div>
+ 
+    <div class="cart-list" id="cartList"></div>
+ 
+    <div class="cart-foot">
+      <a class="btn solid wide" id="checkout" href="#" target="_blank">Order via WhatsApp</a>
+    </div>
+  </aside>
+ 
+  <script src="js/shop.js"></script>
+</body>
+ 
+</html>
+ 

@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+ 
+/* ---------- WARNA (sama persis dengan halaman utama) ---------- */
+:root {
+    --primary: #A9D8E8;
+    --secondary: #DCEFF5;
+    --cream: #FFFDF7;
+    --white: #FFFFFF;
+    --text: #4B5558;
+    --dark-blue: #6FAFC4;
+    --deep: #3F7F96;
+    --pink: #F3C5CC;
+    --ink: #2D5A6B;
+ 
+    /* tambahan khusus halaman shop */
+    --line: #CFE4EC;
+    --accent: #3F7F96;
+}
+ 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+ 
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+}
+ 
+img {
+    display: block;
+    max-width: 100%;
+}
+ 
+button,
+input,
+textarea {
+    font: inherit;
+}
+ 
+button {
+    cursor: pointer;
+}
+ 
+.wrap {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+ 
+.section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+ 
+.title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--deep);
+}
+ 
+.lead {
+    max-width: 430px;
+    margin-bottom: 26px;
+    font-size: 15px;
+}
+ 
+ 
+/* ---------- HEADER (sama dengan halaman utama) ---------- */
+header {
+    background: var(--primary);
+    padding: 0.5rem;
+}
+ 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.header img {
+    width: 10rem;
+    height: 4rem;
+    object-fit: contain;
+    position: relative;
+    left: 35px;
+}
+ 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0.3rem 7rem 0 1rem;
+}
+ 
+.navbar a {
+    color: var(--cream);
+}
+ 
+.navbar a:hover,
+#cartOpen:hover {
+    color: var(--ink);
+}
+ 
+#cartOpen {
+    padding: 4px 0;
+    border: 0;
+    border-bottom: 1px solid var(--cream);
+    background: transparent;
+    color: var(--cream);
+}
+ 
+ 
+/* ---------- JUDUL SHOP ---------- */
+.intro {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 62px 32px 24px;
+}
+ 
+.intro h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--deep);
+}
+ 
+.intro p {
+    max-width: 510px;
+    margin-top: 12px;
+    font-size: 15px;
+}
+ 
+ 
+/* ---------- PRODUK (SLIDER) ---------- */
+.slider-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0 22px;
+    font-size: 14px;
+}
+ 
+.arrows {
+    display: flex;
+    gap: 8px;
+}
+ 
+.arrows button {
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid var(--deep);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--deep);
+    font-size: 18px;
+    transition: background 0.25s, color 0.25s;
+}
+ 
+.arrows button:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+ 
+.slider {
+    display: flex;
+    gap: 22px;
+    padding-bottom: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+ 
+.slider::-webkit-scrollbar {
+    display: none;
+}
+ 
+.slider article {
+    flex: 0 0 calc((100% - 66px) / 4);   /* 4 produk per layar */
+    min-width: 0;
+    scroll-snap-align: start;
+}
+ 
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 5;
+    padding: 14px;
+    overflow: hidden;
+    background: var(--secondary);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(111, 175, 196, 0.22);
+}
+ 
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+ 
+.photo:hover img {
+    transform: scale(1.035);
+}
+ 
+.name {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--ink);
+}
+ 
+.tag {
+    min-height: 42px;
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+ 
+.price {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--deep);
+}
+ 
+ 
+/* ---------- TOMBOL (pill, sama dengan halaman utama) ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+    padding: 12px 26px;
+    border: 1.5px solid var(--deep);
+    border-radius: 25px;
+    background: transparent;
+    color: var(--deep);
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+ 
+.btn:hover {
+    background: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+ 
+.btn.solid {
+    background: var(--deep);
+    color: var(--white);
+}
+ 
+.btn.solid:hover {
+    background: var(--dark-blue);
+}
+ 
+.btn.wide {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+}
+ 
+.btn.off {
+    opacity: 0.4;
+    pointer-events: none;
+}
+ 
+ 
+/* ---------- FAQ ---------- */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+ 
+.tab {
+    padding: 10px 18px;
+    border: 1.5px solid var(--primary);
+    border-radius: 25px;
+    background: transparent;
+    font-size: 14px;
+    transition: background 0.25s, color 0.25s;
+}
+ 
+.tab:hover {
+    background: var(--secondary);
+}
+ 
+.tab.on {
+    border-color: var(--deep);
+    background: var(--deep);
+    color: var(--white);
+}
+ 
+.tab-box {
+    display: none;
+    min-height: 105px;
+    padding: 24px;
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    background: var(--white);
+    font-size: 15px;
+}
+ 
+.tab-box.on {
+    display: block;
+}
+ 
+ 
+/* ---------- CONTACT ---------- */
+.contact {
+    padding: 64px 0;
+    background: var(--secondary);
+}
+ 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+ 
+.info {
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+ 
+.info strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+ 
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+ 
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    outline: none;
+}
+ 
+form input:focus,
+form textarea:focus {
+    border-color: var(--deep);
+}
+ 
+form textarea {
+    resize: vertical;
+}
+ 
+ 
+/* ---------- FOOTER ---------- */
+.footer {
+    padding: 16px;
+    border-top: 1px solid var(--secondary);
+    background: var(--cream);
+    color: #6c757d;
+    text-align: center;
+    font-size: 14px;
+}
+ 
+ 
+/* ---------- KERANJANG ---------- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+ 
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+ 
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: min(370px, 100%);
+    background: var(--cream);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+}
+ 
+.cart.open {
+    transform: translateX(0);
+}
+ 
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+    background: var(--primary);
+    color: var(--cream);
+    font-size: 15px;
+    font-weight: 600;
+}
+ 
+.cart-head button {
+    padding: 5px 0;
+    border: 0;
+    border-bottom: 1px solid var(--cream);
+    background: transparent;
+    color: var(--cream);
+}
+ 
+.cart-list {
+    flex: 1;
+    padding: 20px 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+ 
+.empty {
+    margin-top: 30%;
+    text-align: center;
+}
+ 
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+}
+ 
+.qty {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+ 
+.qty button {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: transparent;
+    color: var(--deep);
+}
+ 
+.qty span {
+    width: 26px;
+    text-align: center;
+    font-size: 13px;
+}
+ 
+.cart-foot {
+    padding: 18px 24px;
+    border-top: 1px solid var(--line);
+}
+ 
+ 
+
+ 
